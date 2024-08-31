@@ -1,0 +1,193 @@
+/* Keyframes for overlay and modal animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUpFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply fade-in animation to the overlay */
+.modal-overlay {
+  width: 100vw;
+  height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.75);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* Apply slide-up and fade-in animation to the modal content */
+.modal-content {
+  position: relative;
+  width: 900px;
+  background-color: var(--card-background);
+  border: 1px solid var(--border-color);
+  padding: 20px;
+  border-radius: 20px;
+  display: flex;
+  gap: 20px;
+  animation: slideUpFadeIn 0.3s ease-out;
+}
+
+/* Rest of your CSS remains the same */
+
+.modal-close-btn {
+  color: var(--text-color);
+  background: var(--item-background) !important;
+  border-radius: 8px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-items: center;
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  cursor: pointer;
+  font-size: 1.5rem;
+  background: none;
+  opacity: 0.8;
+  border: none;
+}
+
+.modal-close-btn:hover,
+.modal-close-btn:focus {
+  opacity: 1;
+}
+
+.modal-image-container img {
+  border-radius: 16px;
+  width: 415px;
+}
+
+.modal-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.modal-category {
+  color: rgba(214, 214, 214, 0.7);
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.modal-description {
+  margin: 25px 0;
+  color: rgb(214, 214, 214);
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+.modal-visit-btn {
+  text-decoration: none;
+  position: relative;
+  width: max-content;
+  margin-right: auto;
+  background: linear-gradient(
+    to bottom right,
+    hsl(0, 0%, 25%) 0%,
+    hsla(0, 0%, 25%, 0) 50%
+  );
+  color: var(--accent-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 20px;
+  border-radius: 14px;
+  font-size: 16px;
+  text-transform: capitalize;
+  box-shadow: 0 16px 40px hsla(0, 0%, 0%, 0.25);
+  z-index: 1;
+  transition: var(--transition-1);
+}
+
+.modal-visit-btn::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  background: linear-gradient(
+      to bottom right,
+      hsla(240, 1%, 18%, 0.251) 0%,
+      hsla(240, 2%, 11%, 0) 100%
+    ),
+    hsl(240, 2%, 13%);
+  border-radius: inherit;
+  z-index: -1;
+  transition: var(--transition-1);
+}
+
+/* Button hover styling */
+.modal-visit-btn:hover {
+  cursor: pointer;
+  background: linear-gradient(
+    to bottom right,
+    rgb(186, 255, 107) 0%,
+    rgba(181, 255, 97, 0) 50%
+  );
+}
+
+/* Button hover pseudo-element styling */
+.modal-visit-btn:hover::before {
+  background: linear-gradient(
+      135deg,
+      rgba(186, 255, 107, 0.251) 0%,
+      rgba(179, 255, 92, 0) 59.86%
+    ),
+    rgb(32, 32, 34);
+}
+
+@media only screen and (max-width: 1024px) {
+  .modal-content {
+    width: 90vw;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .modal-content {
+    flex-direction: column;
+  }
+  .modal-image-container img {
+    width: calc(90vw - 40px);
+  }
+}
+
+@media only screen and (max-width: 580px) {
+  .modal-content {
+    width: 95vw;
+    padding: 20px;
+    gap: 10px;
+  }
+  .modal-image-container img {
+    width: calc(95vw - 40px);
+  }
+  .modal-description {
+    margin: 20px 0;
+    font-size: 14px;
+  }
+}

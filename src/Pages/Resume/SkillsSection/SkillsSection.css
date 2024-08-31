@@ -1,0 +1,44 @@
+/* Title styling for the skills section */
+.skills-title {
+  text-transform: capitalize;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Content card styling */
+.content-card {
+  position: relative;
+  background: linear-gradient(
+    to bottom right,
+    rgb(63, 63, 64) 3%,
+    rgb(48, 48, 48) 97%
+  );
+  padding: 30px;
+  padding-top: 25px;
+  border-radius: 14px;
+  box-shadow: var(--shadow-2);
+  cursor: pointer;
+  z-index: 1;
+}
+
+/* Content card pseudo-element styling */
+.content-card::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  background: linear-gradient(
+      to bottom right,
+      rgba(45, 45, 46, 0.251) 0%,
+      rgba(27, 27, 29, 0) 100%
+    ),
+    rgb(32, 32, 34);
+  border-radius: inherit;
+  z-index: -1;
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 580px) {
+  .skills-title {
+    font-size: 18px;
+  }
+}
