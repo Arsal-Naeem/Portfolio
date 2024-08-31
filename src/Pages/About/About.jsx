@@ -1,5 +1,5 @@
 import Layout from "../../Components/Layout/Layout";
-import Brief from "./brief/Brief";
+import Brief from "./Brief/Brief";
 import Services from "./Services/Services";
 
 const About = () => {
