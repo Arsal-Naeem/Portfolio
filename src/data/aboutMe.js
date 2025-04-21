@@ -1,12 +1,7 @@
 export const briefContent = [
-  `As a software engineering student at UBIT, I am passionate about
-    front-end development with a strong foundation in JavaScript, HTML, and
-    CSS. My skills in React.js and Git help me create seamless web
-    experiences and manage projects efficiently. I am driven to continuously
-    refine my skills and explore new technologies in web development.`,
+  `Passionate about building seamless, high-performance web applications using Next.js, React, and Figma. As a Frontend Engineer, I focus on developing scalable solutions with a keen eye for UI/UX design, responsiveness, and performance optimization.`,
 
-  `I am committed to continuous learning and eager to tackle the challenges
-    of front-end engineering. My goal is to deliver innovative,
-    user-centered solutions and contribute meaningfully to the evolving
-    field of web development.`,
+  `I thrive on creating intuitive user experiences, collaborating with teams, and staying up-to-date with modern front-end technologies. I aim to bridge the gap between aesthetics and functionality from component-based architecture to interactive design.`,
+
+  `Currently working on enterprise-level ERP solutions at Max ERP, but always open to learning and exploring new challenges. Let’s connect!`,
 ];

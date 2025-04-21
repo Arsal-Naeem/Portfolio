@@ -7,10 +7,12 @@ import {
   faCertificate,
   faGraduationCap,
 } from "@fortawesome/free-solid-svg-icons";
+import { experience } from "../../data/Experience";
 
 const Resume = () => {
   return (
     <Layout pageTitle="Resume">
+      <Timeline title="Experience" icon={faGraduationCap} items={experience} />
       <Timeline title="Education" icon={faGraduationCap} items={education} />
       <Timeline
         title="Certifications"

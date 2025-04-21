@@ -4,7 +4,7 @@ import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import "./ProjectModal.css";
 
 const ProjectModal = ({ project, closeModal }) => {
-  const { title, category, description, imgSrc, link } = project;
+  const { title, category, description, imgSrc, myRole, link } = project;
 
   //Closing the Modal when clicked outside it
   useEffect(() => {
@@ -39,6 +39,28 @@ const ProjectModal = ({ project, closeModal }) => {
             <p className="modal-category">{category}</p>
           </header>
           <p className="modal-description">{description}</p>
+
+          <section className="modal-tech-stack">
+            <h4 className="modal-tech-stack-title">Tech Stack</h4>
+            <div className="modal-tech-container">
+              {project.techStack.map((tech, index) => (
+                <span key={index} className="modal-tech-tag">
+                  {tech}
+                </span>
+              ))}
+            </div>
+          </section>
+
+          <section className="modal-my-role">
+            <h4 className="modal-my-role-title">My Role</h4>
+            <ul className="modal-role-list">
+              {myRole.map((role, index) => (
+                <li key={index} className="modal-role-item">
+                  {role}
+                </li>
+              ))}
+            </ul>
+          </section>
           <a
             href={link}
             className="modal-visit-btn"

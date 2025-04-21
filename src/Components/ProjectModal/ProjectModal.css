@@ -43,8 +43,10 @@
   padding: 20px;
   border-radius: 20px;
   display: flex;
-  gap: 20px;
+  gap: 28px;
   animation: slideUpFadeIn 0.3s ease-out;
+  max-height: 90vh;
+  overflow-y: auto;
 }
 
 /* Rest of your CSS remains the same */
@@ -162,6 +164,91 @@
     rgb(32, 32, 34);
 }
 
+.modal-my-role {
+  margin-bottom: 25px;
+}
+
+.modal-my-role-title {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 12px;
+  color: var(--text-color);
+}
+
+.modal-role-list {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  margin-left: -8px;
+  gap: 8px;
+}
+
+.modal-role-item {
+  position: relative;
+  padding-left: 24px;
+  color: rgb(214, 214, 214);
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+.modal-role-item::before {
+  content: "•";
+  position: absolute;
+  left: 8px;
+  color: var(--accent-color);
+  font-size: 18px;
+}
+
+.modal-tech-stack {
+  margin-bottom: 25px;
+}
+
+.modal-tech-stack-title {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 12px;
+  color: var(--text-color);
+}
+
+.modal-tech-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.modal-tech-tag {
+  cursor: default;
+  background: linear-gradient(
+    to bottom right,
+    hsl(0, 0%, 25%) 0%,
+    hsla(0, 0%, 25%, 0) 50%
+  );
+  padding: 8px 12px;
+  border-radius: 10px;
+  font-size: 14px;
+  color: var(--accent-color);
+  position: relative;
+  z-index: 1;
+  transition: var(--transition-1);
+}
+
+.modal-tech-tag::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  background: linear-gradient(
+      to bottom right,
+      hsla(240, 1%, 18%, 0.251) 0%,
+      hsla(240, 2%, 11%, 0) 100%
+    ),
+    hsl(240, 2%, 13%);
+  border-radius: inherit;
+  z-index: -1;
+  transition: var(--transition-1);
+}
+
 @media only screen and (max-width: 1024px) {
   .modal-content {
     width: 90vw;
@@ -189,5 +276,24 @@
   .modal-description {
     margin: 20px 0;
     font-size: 14px;
+  }
+  .modal-role-item {
+    font-size: 14px;
+    padding-left: 20px;
+  }
+  
+  .modal-my-role-title {
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+  
+  .modal-tech-tag {
+    font-size: 13px;
+    padding: 6px 10px;
+  }
+  
+  .modal-tech-stack-title {
+    font-size: 1rem;
+    margin-bottom: 10px;
   }
 }

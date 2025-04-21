@@ -2,21 +2,43 @@ import Layout from "../../Components/Layout/Layout";
 import ProjectItem from "../../Components/ProjectItem/ProjectItem";
 import { projects } from "../../data/Projects";
 import ProjectModal from "../../Components/ProjectModal/ProjectModal";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 
 const Portfolio = () => {
   const [modalProject, setModalProduct] = useState(null);
 
   const openModal = (project) => {
-    console.log(project)
     setModalProduct(project);
   };
 
   const closeModal = () => {
-    console.log("closing")
     setModalProduct(null);
   };
+
+  useEffect(() => {
+    const isWideScreen = window.innerWidth > 768;
+    
+    if (modalProject) {
+      document.body.style.overflow = 'hidden';
+      if (isWideScreen) {
+        document.body.style.marginRight = '10px';
+      }
+    } else {
+      document.body.style.overflow = 'auto';
+      if (isWideScreen) {
+        document.body.style.marginRight = '0';
+      }
+    }
+  
+    return () => {
+      document.body.style.overflow = 'auto';
+      if (isWideScreen) {
+        document.body.style.marginRight = '0';
+      }
+    };
+  }, [modalProject]);
+
   return (
     <>
       <Layout pageTitle="Portfolio">
