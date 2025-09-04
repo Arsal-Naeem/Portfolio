@@ -66,6 +66,7 @@ const ProjectModal = ({ project, closeModal }) => {
             className="modal-visit-btn"
             target="_blank"
             rel="noopener noreferrer"
+            style={{ marginBottom: "16px" }}
           >
             Visit Website
           </a>
