@@ -1,9 +1,22 @@
 import arsheryBistro from "../assets/arsherybistro.png";
+import noahtax from "../assets/noahtax.png";
 import ardonyx from "../assets/ardonyx.png";
 import smartSpend from "../assets/smartSpend.png";
 import karyawan from "../assets/karyawan.png";
 
 export const projects = [
+  {
+    id: 0,
+    title: "Noah Tax",
+    techStack: ["Next.js", "Shadcn", "ReCharts", "Tailwind CSS"],
+    category: "Tax Consulting Website",
+    description:
+      "Noah Tax is a modern tax consulting website designed to provide users with comprehensive tax services and resources. Built with Next.js and Shadcn UI components, the site features a clean and intuitive interface that enhances user experience. Key functionalities include interactive tax calculators powered by ReCharts, informative articles, and a user-friendly contact form for consultations. The responsive design ensures seamless access across all devices, making Noah Tax a reliable platform for individuals and businesses seeking expert tax advice.",
+    imgSrc: noahtax,
+    myRole: ["Frontend Development", "UI/UX Design", "Project Management"],
+    link: "https://www.noahtax.com/",
+    slug: "noah-tax-consulting-website",
+  },
   {
     id: 1,
     title: "Ardonyx",
@@ -14,6 +27,7 @@ export const projects = [
     imgSrc: ardonyx,
     myRole: ["Frontend Development", "Project Management"],
     link: "https://ardonyx-frontend.vercel.app",
+    slug: "ardonyx-clothing-store",
   },
   {
     id: 3,
@@ -25,9 +39,22 @@ export const projects = [
     imgSrc: arsheryBistro,
     myRole: ["Frontend Development", "UI/UX Design", "Project Management"],
     link: "https://demo-hod.vercel.app/",
+    slug: "house-of-dumplings",
   },
   {
     id: 4,
+    title: "SmartSpend",
+    techStack: ["Next.js", "antD"],
+    category: "Expense Tracker",
+    description:
+      "Smart Spend is a personal finance management tool that helps users track their expenses and manage their budgets effectively. The platform offers a user-friendly interface, allowing users to easily input and categorize their expenses. With features like expense tracking, budget setting, and financial insights, Smart Spend empowers users to take control of their finances.",
+    imgSrc: smartSpend,
+    myRole: ["Frontend Development", "UI/UX Design", "Project Management"],
+    link: "https://smart-spend-web.vercel.app/",
+    slug: "smartspend-expense-tracker",
+  },
+  {
+    id: 5,
     title: "The Karyawan",
     techStack: ["React.js", "Shadcn", "Tailwind"],
     category: "Publication Website",
@@ -40,17 +67,7 @@ export const projects = [
       "Visual Bug Fixing",
     ],
     link: "https://karyawan-v2.vercel.app/",
-  },
-  {
-    id: 2,
-    title: "SmartSpend",
-    techStack: ["Next.js", "antD"],
-    category: "Expense Tracker",
-    description:
-      "Smart Spend is a personal finance management tool that helps users track their expenses and manage their budgets effectively. The platform offers a user-friendly interface, allowing users to easily input and categorize their expenses. With features like expense tracking, budget setting, and financial insights, Smart Spend empowers users to take control of their finances.",
-    imgSrc: smartSpend,
-    myRole: ["Frontend Development", "UI/UX Design", "Project Management"],
-    link: "https://smart-spend-web.vercel.app/",
+    slug: "the-karyawan",
   },
 
   // {
